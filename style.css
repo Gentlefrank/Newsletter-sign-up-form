@@ -1,0 +1,85 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    box-sizing: inherit;
+    margin: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 2rem;
+}
+p{
+    font-size: 1rem;
+}
+img{
+    width: 100%;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+  
+}
+.container--image{
+    position: relative;
+    margin: 0;
+}
+.container--image img{
+    
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+  
+}
+.container--content{
+    padding: 2em;
+}
+.container--content ul{
+     margin: 0;
+     padding: 0;
+     margin-bottom: 1em;
+}
+.container--content li {
+    list-style-type: none;
+    line-height: 2;
+    list-style-position: outside; /* Default behavior */
+    text-indent: -2em; /* Adjust to match bullet or number width */
+    padding-left: 2em; /* Creates space for the bullet */
+}
+.reduce{
+    width: 1em;
+    height: 1em;
+    margin-right: 1rem;
+}
+
+.success {
+    display: none;
+}
+
+label{
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: .8rem;
+}
+input{
+    margin: 1rem auto;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 1em;
+   
+}
+ 
+.suscribe-btn{
+    width: 100%;
+    display: block;
+    padding: 1em;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+}
