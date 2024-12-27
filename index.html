@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/fonts/Roboto-Regular.ttf">
+  <link rel="stylesheet" href="assets/fonts/Roboto-Bold.ttf">
   <link rel="stylesheet" href="style.css">
   <script defer src="index.js"></script>
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
@@ -14,16 +16,21 @@
 <body>
 
   <!-- Sign-up form start -->
-  <div class="signup container">
+  <div class="container signup">
     <div class="container--image">
-      <img src="assets/images/illustration-sign-up-mobile.svg" alt="mobile banner" />
+      <picture>
+        <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width:48rem)">
+           <img src="assets/images/illustration-sign-up-mobile.svg" alt="mobile banner" />
+      </picture>
+  
+     
     </div>
     <div class="container--content">
       <form>
   
   <h1>Stay updated!</h1>
 
-  <p>Join 60,000+ product managers receiving monthly updates on:</p>
+  <p class="black">Join 60,000+ product managers receiving monthly updates on:</p>
  <ul>
   <li> <span><img src="assets/images/icon-list.svg"  class="reduce"/></span> Product discovery and building what matters </li>
   <li>  <span><img src="assets/images/icon-list.svg" class="reduce" /></span> Measuring to ensure updates are a success</li>
@@ -33,6 +40,7 @@
  <div>
   <label for="email"> Email address</label>
   <input placeholder="email@company.com" id="email" />
+  <p class="text-danger" id="errorMsg"></p>
   <button class="suscribe-btn">Subscribe to monthly newsletter</button>
  </div>
 
@@ -42,22 +50,31 @@
   </div>
   <!-- Success message start -->
 
+</div>
+
 <div class="success container">
 
+  <div class="container--content">
+   
+          <img src="assets/images/icon-success.svg" class="success-check" />
+ 
 
- <h1> Thanks for subscribing! </h1>
-
-  <p>
-    A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-  </p>
-
-  Dismiss message
-
-  <!-- Success message end -->
+   <h1> Thanks for subscribing! </h1>
   
+    <p>
+      A confirmation email has been sent to ash@loremcompany.com. 
+    Please open it and click the button inside to confirm your subscription.
+    </p>
+  
+  
+  
+    <!-- Success message end -->
   </div>
+   <button class="suscribe-btn dismiss-btn">Dismiss message </button> 
+    
+    </div>
+  
+  
 
-</div>
 </body>
 </html>
