@@ -7,7 +7,8 @@ const getError= document.getElementById("errorMsg")
 const getSignupDiv= document.querySelector(".signup")
 const getSuccessDiv= document.querySelector(".success")
 const getDismissBtn= document.querySelector(".dismiss-btn")
-
+const getDismissBtnLg= document.querySelector(".dismiss-btn-lg")
+const largeDevices=  window.matchMedia("(min-width: 48rem)")
 let emailValidation= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  
 let theError= ""
@@ -56,6 +57,15 @@ const handleSubmit =(e)=> {
 getForm.addEventListener("submit", handleSubmit)
 
 getDismissBtn.addEventListener('click', function(){
-    getSignupDiv.style.display = "flex"
+    if (largeDevices.matches){
+          getSignupDiv.style.display = "flex"
     getSuccessDiv.style.display = "none"
+    }else{
+          getSignupDiv.style.display = "block"
+    getSuccessDiv.style.display = "none"  
+    }
+
 })
+
+
+ 
